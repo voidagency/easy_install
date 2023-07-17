@@ -9,7 +9,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Routing\RouteMatchInterface;
-Use \Drupal\Core\File\FileSystemInterface;
 
 /**
  * Implements hook_form_alter().
@@ -51,6 +50,7 @@ function easy_install_form_alter(&$form, FormStateInterface $form_state, $form_i
             '#validated' => TRUE,
           ];
         }
+        $optional_details = [];
         if(file_exists($optional_dir)) {
             $optional_details = \Drupal::service('file_system')->scanDirectory($optional_dir, "/\.(yml)$/");
         }
