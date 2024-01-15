@@ -1,5 +1,5 @@
 {
-  "name": "b-khouy/easy_install",
+  "name": "voidagency/easy_install",
   "type": "drupal-module",
   "description": "Provides UI to delete configuration while uninstalling or reinstalling the modules",
   "homepage": "https://www.drupal.org/project/easy_install",
